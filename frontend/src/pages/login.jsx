@@ -2,9 +2,9 @@ import { useState } from "react";
 import logo from "../../public/Logo-Barberpro.svg";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
-import { TabNav } from "../components/TabNav";
 
 export function Login() {
+  const [active, setActive] = useState("client");
   const [changeType, setChangeType] = useState("password");
 
   return (
@@ -49,7 +49,20 @@ export function Login() {
               Entre na sua conta para continuar.
             </span>
           </div>
-          <TabNav />
+          <nav className="bg-gray-300 w-full border border-gray-300 rounded-xl p-1 flex items-center justify-between gap-1.25">
+            <div
+              onClick={() => setActive("client")}
+              className={`${active === "client" ? "bg-gold-500 text-center text-gray-500 w-full rounded-xl p-2" : "bg--gray-300 text-center text-brow-200 w-full rounded-xl p-2 hover:text-brow-100"}`}
+            >
+              Sou Cliente
+            </div>
+            <div
+              onClick={() => setActive("owner")}
+              className={`${active === "owner" ? "bg-gold-500 text-center text-gray-500 w-full rounded-xl p-2" : "bg-gray-300 text-center text-brow-200 w-full rounded-xl p-2 hover:text-brow-100"}`}
+            >
+              Sou Proprietário
+            </div>
+          </nav>
 
           <Input label="E-MAIL" type="email" placeholder="E-mail" />
 
