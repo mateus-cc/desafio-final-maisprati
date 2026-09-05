@@ -40,7 +40,7 @@ export function Login() {
           </div>
         </div>
 
-        <form className="w-full md:w-125 flex flex-1 flex-col justify-center gap-2.5 p-4">
+        <form className="w-full md:w-125 flex flex-1 flex-col justify-center gap-2.5 p-10">
           <div className="mb-4">
             <h2 className="text-brow-100 font-display text-3xl">
               Bem-vindo de volta

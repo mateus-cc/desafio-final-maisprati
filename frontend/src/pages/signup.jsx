@@ -75,7 +75,7 @@ export function Signup() {
             </span>
           </div>
           
-          <Input label="NOME COMPLETO" type="text" placeholder="Carlos de Oliveira" />
+          <Input label="NOME COMPLETO" type="" placeholder="Carlos de Oliveira" />
           <Input label="E-MAIL" type="email" placeholder="E-mail" />
           <Input
             label="SENHA"
