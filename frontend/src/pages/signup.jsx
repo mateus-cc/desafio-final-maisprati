@@ -1,11 +1,13 @@
+import { MoveRight } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
 import logo from "../../public/Logo-Barberpro.svg";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import Separator from "../components/Separator";
 
 export function Signup() {
-  const [changeType, setChangeType] = useState("password");
+  /* const [changeType, setChangeType] = useState("password"); */
   const [active, setActive] = useState("client");
 
   return (
@@ -35,7 +37,7 @@ export function Signup() {
           `}
         >
           <div className="w-max-[500px] p-10 z-999">
-            <div className="border border-gold-500 w-10 mb-4" />
+            <Separator />
             <h1 className="text-brow-100 font-display text-4xl">
               {active === "client"
                 ? "Crie sua conta."
@@ -75,14 +77,22 @@ export function Signup() {
                 : "Cadastre sua barbearia e comece a receber agendamentos online."}
             </span>
           </div>
+          <div className="flex gap-2">
+            <Separator className="w-[50%] mb-6" />
+            <Separator className="w-[50%] border-brow-300 mb-6" />
+          </div>
 
+          <span className="uppercase text-brow-200 text-[12px]">
+            Passo 1 de 2 — Dados pessoais
+          </span>
           <Input
             label="NOME COMPLETO"
             type=""
             placeholder="Carlos de Oliveira"
           />
-          <Input label="E-MAIL" type="email" placeholder="E-mail" />
-          <Input
+          <Input label="E-MAIL" type="email" placeholder="seu@email.com" />
+          <Input label="Telefone" type="phone" placeholder="(99)999999999" />
+          {/*  <Input
             label="SENHA"
             type={changeType}
             placeholder="********"
@@ -91,30 +101,30 @@ export function Signup() {
                 ? setChangeType("text")
                 : setChangeType("password")
             }
-          />
+          /> */}
 
-          <div className="flex justify-between m-4">
-            <div className="flex items-center gap-1">
-              <input id="remember" type="checkbox" />
-
-              <label htmlFor="remember" className="text-[12px] text-brow-200">
-                Lembrar de mim
-              </label>
-            </div>
-
-            <a href="#" className="text-gold-500 hover:text-gold-400">
-              Esqueci a senha
-            </a>
-          </div>
-
-          <Button>Entrar</Button>
+          <Button>
+            Continuar <MoveRight />
+          </Button>
 
           <div className="text-center">
-            Não tem conta?{" "}
+            Já tem conta?{" "}
             <Link to="/" className="text-gold-500">
               Entrar
             </Link>
           </div>
+          {active === "client" && (
+            <div className="text-center">
+              É barbeiro?{" "}
+              <Link
+                to="#"
+                onClick={() => setActive("owner")}
+                className="text-gold-500"
+              >
+                Cadastre sua barbearia
+              </Link>
+            </div>
+          )}
         </form>
       </div>
     </div>

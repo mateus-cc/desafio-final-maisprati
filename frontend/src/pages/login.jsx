@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import logo from "../../public/Logo-Barberpro.svg";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
-import { Link } from "react-router";
+import Separator from "../components/Separator";
 
 export function Login() {
   const [active, setActive] = useState("client");
@@ -31,7 +32,7 @@ export function Login() {
           "
         >
           <div className="w-max-[500px] p-10 z-999">
-            <div className="border border-gold-500 w-10 mb-4" />
+            <Separator className="" />
             <h1 className="text-brow-100 font-display text-4xl">
               O corte perfeito começa aqui.
             </h1>
@@ -65,7 +66,7 @@ export function Login() {
             </div>
           </nav>
 
-          <Input label="E-MAIL" type="email" placeholder="E-mail" />
+          <Input label="E-MAIL" type="email" placeholder="seu@email.com" />
 
           <Input
             label="SENHA"
