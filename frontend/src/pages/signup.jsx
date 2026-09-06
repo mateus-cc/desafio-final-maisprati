@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import logo from "../../public/Logo-Barberpro.svg";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
@@ -74,8 +75,12 @@ export function Signup() {
                 : "Cadastre sua barbearia e comece a receber agendamentos online."}
             </span>
           </div>
-          
-          <Input label="NOME COMPLETO" type="" placeholder="Carlos de Oliveira" />
+
+          <Input
+            label="NOME COMPLETO"
+            type=""
+            placeholder="Carlos de Oliveira"
+          />
           <Input label="E-MAIL" type="email" placeholder="E-mail" />
           <Input
             label="SENHA"
@@ -97,7 +102,7 @@ export function Signup() {
               </label>
             </div>
 
-            <a href="/" className="text-gold-500 hover:text-gold-400">
+            <a href="#" className="text-gold-500 hover:text-gold-400">
               Esqueci a senha
             </a>
           </div>
@@ -106,9 +111,9 @@ export function Signup() {
 
           <div className="text-center">
             Não tem conta?{" "}
-            <a href="/" className="text-gold-500">
-              Cadastrar-se
-            </a>
+            <Link to="/" className="text-gold-500">
+              Entrar
+            </Link>
           </div>
         </form>
       </div>

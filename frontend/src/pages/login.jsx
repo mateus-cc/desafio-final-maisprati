@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../../public/Logo-Barberpro.svg";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import { Link } from "react-router";
 
 export function Login() {
   const [active, setActive] = useState("client");
@@ -86,7 +87,7 @@ export function Login() {
               </label>
             </div>
 
-            <a href="/" className="text-gold-500 hover:text-gold-400">
+            <a href="#" className="text-gold-500 hover:text-gold-400">
               Esqueci a senha
             </a>
           </div>
@@ -95,9 +96,9 @@ export function Login() {
 
           <div className="text-center">
             Não tem conta?{" "}
-            <a href="/" className="text-gold-500">
+            <Link to="/signup" className="text-gold-500">
               Cadastrar-se
-            </a>
+            </Link>
           </div>
         </form>
       </div>

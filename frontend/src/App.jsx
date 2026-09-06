@@ -1,9 +1,9 @@
-import { Signup } from "./pages/Signup";
+import { Outlet } from "react-router";
 
 function App() {
   return (
     <div>
-      <Signup />
+      <Outlet />
     </div>
   );
 }
