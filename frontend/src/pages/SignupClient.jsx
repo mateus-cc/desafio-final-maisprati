@@ -36,9 +36,7 @@ export default function SignupClient() {
     <div>
 
       <div className="mb-4">
-        {" "}
         <h2 className="text-brow-100 font-display text-3xl">Criar conta </h2>
-        ```
         <span className="text-brow-200 text-[14px]">
           Crie sua conta gratuita em menos de 2 minutos.
         </span>

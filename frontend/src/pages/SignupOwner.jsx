@@ -69,11 +69,9 @@ export function SignupOwner() {
   return (
     <div>
       <div className="mb-4">
-        {" "}
         <h2 className="text-brow-100 font-display text-3xl">
           Cadastro profissional{" "}
         </h2>
-        ```
         <span className="text-brow-200 text-[14px]">
           Cadastre sua barbearia e comece a receber agendamentos online.
         </span>
