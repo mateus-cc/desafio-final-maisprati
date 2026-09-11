@@ -1,10 +1,10 @@
-import { MoveRight } from "lucide-react";
-import { useState } from "react";
+/* eslint-disable react-hooks/set-state-in-effect */
 import { Link } from "react-router";
 import logo from "../../public/Logo-Barberpro.svg";
-import { Button } from "../components/Button";
-import { Input } from "../components/Input";
 import Separator from "../components/Separator";
+import SignupClient from "./SignupClient";
+import { SignupOwner } from "./SignupOwner";
+import { useState } from "react";
 
 export function Signup() {
   /* const [changeType, setChangeType] = useState("password"); */
@@ -66,46 +66,9 @@ export function Signup() {
               Barbeiro/Barbearia
             </div>
           </nav>
-
-          <div className="mb-4">
-            <h2 className="text-brow-100 font-display text-3xl">
-              {active === "client" ? "Criar conta" : "Cadastro profissional"}
-            </h2>
-            <span className="text-brow-200 text-[14px]">
-              {active === "client"
-                ? "Crie sua conta gratuita em menos de 2 minutos."
-                : "Cadastre sua barbearia e comece a receber agendamentos online."}
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <Separator className="w-[50%] mb-6" />
-            <Separator className="w-[50%] border-brow-300 mb-6" />
-          </div>
-
-          <span className="uppercase text-brow-200 text-[12px]">
-            Passo 1 de 2 — Dados pessoais
-          </span>
-          <Input
-            label="NOME COMPLETO"
-            type=""
-            placeholder="Carlos de Oliveira"
-          />
-          <Input label="E-MAIL" type="email" placeholder="seu@email.com" />
-          <Input label="Telefone" type="phone" placeholder="(99)999999999" />
-          {/*  <Input
-            label="SENHA"
-            type={changeType}
-            placeholder="********"
-            onChangeType={() =>
-              changeType === "password"
-                ? setChangeType("text")
-                : setChangeType("password")
-            }
-          /> */}
-
-          <Button>
-            Continuar <MoveRight />
-          </Button>
+          
+          {active === "client" && <SignupClient />}
+          {active === "owner" && <SignupOwner />}
 
           <div className="text-center">
             Já tem conta?{" "}

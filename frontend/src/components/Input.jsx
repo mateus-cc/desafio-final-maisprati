@@ -1,14 +1,17 @@
 import { Eye, EyeOff } from "lucide-react";
 
-export function Input({ placeholder, type, label, onChangeType }) {
+export function Input({ placeholder, type, label, onChangeType, value, onChange }) {
   return (
-    <div className="flex flex-col">
+    
+    <div className="flex flex-col w-full">
       <label className="text-brow-200 font-light uppercase">{label}</label>
       <div className="bg-gray-300 w-full rounded-xl flex items-center px-3 py-4 focus-within:outline-1 focus-within:outline-gold-500">
         <input
           className="bg-gray-300 w-full rounded outline-none"
           placeholder={placeholder}
           type={type}
+          onChange={onChange}
+          value={value}
         />
         {type === "password" || type === "text" ? (
           type === "password" ? (
