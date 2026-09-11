@@ -1,5 +1,5 @@
-<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- BarberPro logo mark extraído do Logo-Barberpro.svg -->
+<svg width="176" height="36" viewBox="0 0 176 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- BarberPro logo mark -->
   <g>
     <circle cx="18" cy="18" r="18" fill="#c9a84c"/>
 
@@ -35,5 +35,26 @@
     <circle cx="10.5" cy="26.5" r="2"
             stroke="#0b0b0b" stroke-width="1.6"
             fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- BarberPro wordmark, positioned beside the icon -->
+  <g transform="translate(46 4)">
+    <text x="0" y="21"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="20"
+          font-weight="600"
+          fill="#f0ead6"
+          letter-spacing="0.5">Barber</text>
+
+    <text x="76" y="21"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="20"
+          font-weight="700"
+          fill="#c9a84c"
+          letter-spacing="0.5">Pro</text>
+
+    <line x1="0" y1="25.5" x2="38" y2="25.5"
+          stroke="#c9a84c" stroke-width="1.2"
+          stroke-linecap="round"/>
   </g>
 </svg>
