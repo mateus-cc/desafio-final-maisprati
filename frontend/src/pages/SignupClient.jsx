@@ -7,25 +7,21 @@ import { Input } from "../components/Input";
 import { ProgressBar } from "../components/ProgressBar";
 
 export default function SignupClient() {
-  // DADOS PESSOAIS
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  // ACESSO
   const [changeType, setChangeType] = useState("password");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [terms, setTerms] = useState(false);
 
-  // ETAPA DO CADASTRO
   const [partTwoRegister, setPartTwoRegister] = useState(true);
 
-  // VALIDAÇÃO DA ETAPA 1
   const stepOneValid =
     name.trim() !== "" && email.trim() !== "" && phone.trim() !== "";
 
-  // VALIDAÇÃO DA ETAPA 2
   const stepTwoValid =
     password.trim() !== "" &&
     confirmPassword.trim() !== "" &&
@@ -33,8 +29,7 @@ export default function SignupClient() {
     terms;
 
   return (
-    <div>
-
+    <form>
       <div className="mb-4">
         <h2 className="text-brow-100 font-display text-3xl">Criar conta </h2>
         <span className="text-brow-200 text-[14px]">
@@ -56,7 +51,7 @@ export default function SignupClient() {
 
           <Input
             label="NOME COMPLETO"
-            type="text"
+            type=""
             value={name}
             placeholder="Carlos de Oliveira"
             onChange={(e) => setName(e.target.value)}
@@ -87,7 +82,6 @@ export default function SignupClient() {
           </Button>
         </div>
       ) : (
-
         <div className="block gap-2">
           <span className="uppercase text-brow-200 text-[12px]">
             Passo 2 de 2 — Acesso
@@ -177,6 +171,6 @@ export default function SignupClient() {
           </div>
         </div>
       )}
-    </div>
+    </form>
   );
 }

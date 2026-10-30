@@ -7,13 +7,11 @@ import { Input } from "../components/Input";
 import { ProgressBar } from "../components/ProgressBar";
 
 export function SignupOwner() {
-  // DADOS DO BARBEIRO
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [cpf, setCpf] = useState("");
 
-  // DADOS DA BARBEARIA
   const [nameBarber, setNameBarber] = useState("");
   const [address, setAddress] = useState("");
   const [number, setNumber] = useState("");
@@ -23,16 +21,13 @@ export function SignupOwner() {
   const [closesAt, setClosesAt] = useState("");
   const [services, setServices] = useState([]);
 
-  // ACESSO
   const [changeType, setChangeType] = useState("password");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [terms, setTerms] = useState(false);
 
-  // ETAPA ATUAL
   const [step, setStep] = useState(1);
 
-  // SERVIÇOS DISPONÍVEIS
   const servicesArr = [
     "Corte Masculino",
     "Barba",
@@ -42,7 +37,6 @@ export function SignupOwner() {
     "Tratamentos Capilares",
   ];
 
-  // VALIDAÇÃO DAS ETAPAS
   const stepOneValid =
     name.trim() && email.trim() && phone.trim() && cpf.trim();
 
@@ -61,13 +55,12 @@ export function SignupOwner() {
     password === confirmPassword &&
     terms;
 
-  // PROGRESS BAR
   const progressStepTwo = step >= 2 ? "" : "border-brow-300";
 
   const progressStepThree = step >= 3 ? "" : "border-brow-300";
 
   return (
-    <div>
+    <form>
       <div className="mb-4">
         <h2 className="text-brow-100 font-display text-3xl">
           Cadastro profissional{" "}
@@ -159,31 +152,35 @@ export function SignupOwner() {
             />
           </div>
 
-          <Input
-            label="Cidade"
-            placeholder="Araçuaí"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
+          <div className="flex gap-5">
+            <Input
+              label="Cidade"
+              placeholder="Araçuaí"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
 
-          <label htmlFor="experience" className="text-brow-200 text-sm">
-            Experiência
-          </label>
+            <div>
+              <label htmlFor="experience" className="text-brow-200 text-sm uppercase">
+                Experiência
+              </label>
 
-          <select
-            value={experience}
-            onChange={(e) => setExperience(e.target.value)}
-            name="experience"
-            id="experience"
-            className="w-full"
-          >
-            <option value="">Selecione</option>
-            <option value="menosDeUm">menos de 1 ano</option>
-            <option value="umATres">1-3 anos</option>
-            <option value="tresACinco">3-5 anos</option>
-            <option value="cincoADez">5-10 anos</option>
-            <option value="maisDeDez">mais de 10 anos</option>
-          </select>
+              <select
+                value={experience}
+                onChange={(e) => setExperience(e.target.value)}
+                name="experience"
+                id="experience"
+                className="w-full bg-brow-500 rounded-xl p-4"
+              >
+                <option value="">Selecione</option>
+                <option value="menosDeUm">menos de 1 ano</option>
+                <option value="umATres">1-3 anos</option>
+                <option value="tresACinco">3-5 anos</option>
+                <option value="cincoADez">5-10 anos</option>
+                <option value="maisDeDez">mais de 10 anos</option>
+              </select>
+            </div>
+          </div>
 
           <div className="flex gap-4">
             <Input
@@ -218,7 +215,7 @@ export function SignupOwner() {
                           : [...prev, service],
                       );
                     }}
-                    className={`px-3 py-2 rounded-lg border ${
+                    className={`px-3 py-2 rounded-lg border bg-brow-500 hover:text-brow-100 hover:border-gold-500 ${
                       selected
                         ? "bg-gold-500 text-gray-500"
                         : "border-brow-300 text-brow-200"
@@ -289,7 +286,7 @@ export function SignupOwner() {
             </span>
           )}
 
-          <div className="mt-3 flex gap-1 items-start">
+          <div className="mt-3 flex gap-1 items-center">
             <input
               id="terms"
               type="checkbox"
@@ -346,6 +343,6 @@ export function SignupOwner() {
           </div>
         </div>
       )}
-    </div>
+    </form>
   );
 }

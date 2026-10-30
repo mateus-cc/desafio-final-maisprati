@@ -7,7 +7,6 @@ import { SignupOwner } from "./SignupOwner";
 import { useState } from "react";
 
 export function Signup() {
-  /* const [changeType, setChangeType] = useState("password"); */
   const [active, setActive] = useState("client");
 
   return (
@@ -36,7 +35,7 @@ export function Signup() {
             items-center
           `}
         >
-          <div className="w-max-[500px] p-10 z-999">
+          <div className="min-w-[500px] p-10 z-999">
             <Separator />
             <h1 className="text-brow-100 font-display text-4xl">
               {active === "client"
@@ -51,11 +50,11 @@ export function Signup() {
           </div>
         </div>
 
-        <form className="w-full w-max-[350px] md:w-125 flex flex-1 flex-col justify-center gap-2.5 p-4">
+        <form className="w-full min-w-[350px] md:w-125 flex flex-1 flex-col justify-center gap-2.5 p-4">
           <nav className="bg-gray-300 w-full border border-gray-300 rounded-xl p-1 flex items-center justify-between gap-1.25">
             <div
               onClick={() => setActive("client")}
-              className={`${active === "client" ? "bg-gold-500 text-center text-gray-500 w-full rounded-xl p-2" : "bg--gray-300 text-center text-brow-200 w-full rounded-xl p-2 hover:text-brow-100"}`}
+              className={`${active === "client" ? "bg-gold-500 text-center text-gray-500 w-full rounded-xl p-2" : "bg-gray-300 text-center text-brow-200 w-full rounded-xl p-2 hover:text-brow-100"}`}
             >
               Sou Cliente
             </div>

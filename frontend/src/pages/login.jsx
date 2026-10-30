@@ -31,7 +31,7 @@ export function Login() {
             items-center
           "
         >
-          <div className="w-max-[500px] p-10 z-999">
+          <div className="min-w-[500px] p-10 z-999">
             <Separator className="" />
             <h1 className="text-brow-100 font-display text-4xl">
               O corte perfeito começa aqui.
