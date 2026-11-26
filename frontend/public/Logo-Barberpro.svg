@@ -1,0 +1,60 @@
+<svg width="176" height="36" viewBox="0 0 176 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- BarberPro logo mark -->
+  <g>
+    <circle cx="18" cy="18" r="18" fill="#c9a84c"/>
+
+    <!-- Straight razor blade body -->
+    <path d="M10 13.5 L24.5 10 L26 13 L11.5 16.5 Z"
+          fill="#0b0b0b" opacity="0.9"/>
+
+    <!-- Razor handle -->
+    <rect x="22.5" y="10.5" width="3" height="10" rx="1.2"
+          fill="#0b0b0b" opacity="0.7"
+          transform="rotate(-12 24 15.5)"/>
+
+    <!-- Razor spine highlight -->
+    <line x1="10.5" y1="13.8" x2="24.2" y2="10.5"
+          stroke="#c9a84c" stroke-width="0.6" opacity="0.6"/>
+
+    <!-- Scissor blades -->
+    <path d="M11 21 Q17 24.5 23.5 26.5"
+          stroke="#0b0b0b" stroke-width="2.2"
+          stroke-linecap="round" fill="none" opacity="0.9"/>
+    <path d="M11 26.5 Q17 24 23.5 21"
+          stroke="#0b0b0b" stroke-width="2.2"
+          stroke-linecap="round" fill="none" opacity="0.9"/>
+
+    <!-- Pivot -->
+    <circle cx="17.2" cy="23.9" r="1.5" fill="#0b0b0b" opacity="0.9"/>
+    <circle cx="17.2" cy="23.9" r="0.6" fill="#c9a84c"/>
+
+    <!-- Scissor handles -->
+    <circle cx="10.5" cy="21" r="2"
+            stroke="#0b0b0b" stroke-width="1.6"
+            fill="none" opacity="0.8"/>
+    <circle cx="10.5" cy="26.5" r="2"
+            stroke="#0b0b0b" stroke-width="1.6"
+            fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- BarberPro wordmark, positioned beside the icon -->
+  <g transform="translate(46 4)">
+    <text x="0" y="21"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="20"
+          font-weight="600"
+          fill="#f0ead6"
+          letter-spacing="0.5">Barber</text>
+
+    <text x="76" y="21"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="20"
+          font-weight="700"
+          fill="#c9a84c"
+          letter-spacing="0.5">Pro</text>
+
+    <line x1="0" y1="25.5" x2="38" y2="25.5"
+          stroke="#c9a84c" stroke-width="1.2"
+          stroke-linecap="round"/>
+  </g>
+</svg>

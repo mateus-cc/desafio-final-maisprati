@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-gold-400: #e2c97e;
+  --color-gold-500: #c9a84c;
+  --color-gold-700: #9a7a2e;
+  --color-gray-300: #1c1c1c;
+  --color-gray-400: #141414;
+  --color-gray-500: #0b0b0b;
+  --color-brow-100: #f0ead6;
+  --color-brow-200: #8a8070;
+  --color-brow-300: #2a2a2a;
+  --color-brow-400: #2e2e2e;
+  --color-brow-500: #242424;
+  --color-green-500: #4caf74;
+  --color-red-500: #c94c4c;
+  --color-orange-500: #c98a4c;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: #0b0b0b;
+  color: #f0ead6;
+  font-family: "Outfit", system-ui, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a84c44;
+}
+
